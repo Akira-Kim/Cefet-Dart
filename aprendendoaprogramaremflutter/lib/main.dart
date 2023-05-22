@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Coluna exemplo'),
+          title: Text('Bruno Rabelo de Andrade Mateus'),
         ),
         body: Center(
           child: MyColumn(),
