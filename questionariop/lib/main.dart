@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import './questao.dart';
-import './resposta.dart';
+import './Questao.dart';
+import './Resposta.dart';
 
 main() {
   runApp(AulaComponentes());
@@ -74,13 +74,16 @@ if (tempergunta){
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Questao(perguntas[perguntaAtual]["texto"].toString()),
+          title: tempergunta
+          ? Questao(perguntas[perguntaAtual]["texto"].toString())
+          : Questao("Terminou"),
+
         ),
-        body: Column(
+        body: tempergunta ? Column(
           children: [
             ...respostas,
           ],
-        ),
+        ): Text("Resultado")
       )
     );
 
