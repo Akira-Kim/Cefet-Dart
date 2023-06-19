@@ -1,7 +1,12 @@
-import 'package:flutter/material.dart';
 
+
+import 'package:flutter/material.dart';
+import 'package:questionariop/Questionario.dart';
 import './Questao.dart';
 import './Resposta.dart';
+import './Questionario.dart';
+
+
 
 main() {
   runApp(AulaComponentes());
@@ -34,12 +39,7 @@ class _AulaComponentesState extends State<AulaComponentes> {
 
   ];
   
-   bool get tempergunta{
-
-
-    return perguntaAtual < perguntas.length;
-
-   }
+  
 
 
 
@@ -53,42 +53,19 @@ class _AulaComponentesState extends State<AulaComponentes> {
 
   Widget build(BuildContext context){
 
-    List<Widget> respostas = [];
    
-if (tempergunta){
-
- for (var resposta in perguntas[perguntaAtual].cast()["respostas"]) {
-      print(resposta);
-
-
-      respostas.add(
-          Resposta(resposta, acao)
-        );
-        
-    }
-
-}
 
   
 
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: tempergunta
-          ? Questao(perguntas[perguntaAtual]["texto"].toString())
-          : Questao("Terminou"),
+          title: Text("Jogo de Perguntas") ,
+         
 
         ),
-        body: tempergunta ? Column(
-          children: [
-            ...respostas,
-          ],
-        ): Text("Resultado")
+        body:  Questionario(perguntas: perguntas, perguntaAtual: perguntaAtual, responder: )
       )
     );
-
-
-
-    
   }
 }
