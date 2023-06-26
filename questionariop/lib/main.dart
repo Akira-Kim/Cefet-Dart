@@ -2,9 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:questionariop/Questionario.dart';
-import './Questao.dart';
-import './Resposta.dart';
-import './Questionario.dart';
+import 'package:questionariop/Questao.dart';
+import 'package:questionariop/Resposta.dart';
 
 
 
@@ -45,8 +44,10 @@ class _AulaComponentesState extends State<AulaComponentes> {
 
   void acao(){
     setState(() {
+      
       perguntaAtual++;
     });
+    
     print(perguntaAtual);
   }
 
@@ -61,11 +62,24 @@ class _AulaComponentesState extends State<AulaComponentes> {
       home: Scaffold(
         appBar: AppBar(
           title: Text("Jogo de Perguntas") ,
-         
+
+          
 
         ),
-        body:  Questionario(perguntas: perguntas, perguntaAtual: perguntaAtual, responder: )
+               body: Questionario(
+          
+          perguntas: perguntas,
+          perguntaAtual: perguntaAtual,
+          responder: acao,
+
+        
+         )
+         
+
       )
+      
     );
   }
 }
+
+

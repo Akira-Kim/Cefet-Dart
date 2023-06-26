@@ -51,13 +51,27 @@ tempergunta
           children: [
             ...respostas,
           ],
-        ): Text("Resultado")
+        ): Text(
+              'Seus Resultados:',
+              style: TextStyle(fontSize: 24),
+            ),
+            SizedBox(height: 16),
+            ListView.builder(
+              shrinkWrap: true,
+              itemCount: perguntas.length,
+              itemBuilder: (context, index) {
+                return ListTile(
+                  title: Text('Pergunta ${index + 1}:'),
+                  subtitle: Text('perguntas[index'),
+                );
+              },
+            ),
+
 
 ],);
    }
 
  }
-
 
 
 
@@ -79,3 +93,6 @@ tempergunta
 
     );
   }
+
+
+
