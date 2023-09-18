@@ -5,12 +5,9 @@ class Categoria {
   final String titulo;
   final Color color;
 
-const Categoria({
-  required this.id,
-  required this.titulo,
-  this.color = Colors.orange
-
-});
-
-
+  const Categoria({
+    required this.id,
+    required this.titulo,
+    this.color = Colors.orange,
+  });
 }

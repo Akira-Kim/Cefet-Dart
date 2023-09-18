@@ -52,4 +52,6 @@ const mockCategories = [
     titulo: 'Verão',
     color: Colors.teal,
   ),
+  Categoria(id: 'c11', titulo: 'Verão', color: Colors.black),
+  Categoria(id: 'c12', titulo: 'Bebidas', color: Colors.deepOrange),
 ];
