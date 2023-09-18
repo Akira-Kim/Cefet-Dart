@@ -15,6 +15,8 @@ class TelaProdutos extends StatelessWidget {
     
     ),
     body: Text("A categoria escolhida foi ${categoria.titulo}"),
+
+    
     
     
     );
